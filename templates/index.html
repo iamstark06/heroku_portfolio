@@ -1,0 +1,200 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">  
+        <title>Portfolio - Aman Maurya</title>        
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+        <style>
+            a{
+                text-decoration: none;
+                color: #ffc107;
+            }
+            h1 {
+                margin: 0%;
+                padding: 0%;
+            }
+            #home {
+                padding-top: 12%;
+            }
+            img{
+                margin-bottom: 4px;
+                width: 300px;
+            }
+            .pics {
+                margin-bottom: 4px;
+                width: 300px;
+                transition: opacity .5s ease-in-out;
+            }
+            .pics:hover {
+                opacity: .5;
+            }
+            #social{
+                height: 75px;
+                width: 75px;
+                font-size: 40px;;
+            }
+        </style>
+    </head>
+    <body data-spy="scroll" data-target="#navbarSupportedContent" data-offset="150" style="background-image: url('/static/img/background.jpg'); background-size:cover; background-attachment:fixed; color:white;">
+        <nav id="navbarSupportedContent" class="navbar navbar-expand-md navbar-dark fixed-top">
+
+            <a class="navbar-brand" href="#" style="color:#ffc107;"><h3 class="p-0 m-0">KLAUS</h3></a> 
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span></button>
+
+           <div class="collapse navbar-collapse" >
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pics">Pictures</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</li></a>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a>
+                 </ul>
+            </div>
+        </nav>
+        <div class="container text-center" style="font-family: Verdana;">
+            <div id="home" class="container pb-5">
+                <div class="jumbotron" style="background-color: transparent;">
+                <h1> Welcome!</h1>
+                    <p class="lead"><h1>I am <span style="color:#ffc107;">!</span>a <span style="color:#ffc107;">Web Developer</span></h1></p>
+                    <a href= "#pics"><button class="btn btn-warning">View pictures</button></a>
+                    <button class="btn btn-light" data-toggle="modal" data-target="#modal1">Miss me!</button>
+                    <div class="modal modal-warning fade" id="modal1">
+                        <div class="modal-dialog">
+                            <div class="modal-content" style="color:black;">
+                                <div class="modal-header pt-4 pb-2">
+                                    <h4> Miss Me!</h4>
+                                    <button class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <img src="{% static 'img/belc.png' %}" height="100px" class="img-thumbnail mx-auto pt-2">
+                                <div class="modal-body pb-0 pt-1">
+                                    <h3>Oh well, I miss you too!</h3>
+                                </div>
+                                <div class="modal-footer p-0">
+                                    <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jumbotron" style="background-color: transparent;">
+                    <h4 style="color: #ffc107;">This is a responsive website created using <a href="https://www.getbootstrap.com">Bootstrap framework</a> for frontend and <a href="https://www.djangoproject.com/">Django framework</a> for backend. This is just for learning purpose.</h4>
+                </div>
+            </div>
+
+            <div id="pics" class="container mb-5 mt-5 ">
+                <div class="pb-4 mb-5 mt-4 border-bottom">
+                    <h1> My Pictures</h1>
+                </div>
+                <div class="container pb-5">
+                    <a href="{% static 'img/one.jpg' %}"><img src="{% static 'img/one.jpg' %}" class="img-thumbnail pics" title="Waterfall & Me" alt="Waterfall & Me"></a>
+                    <a href="{% static 'img/two.jpg' %}"><img src="{% static 'img/two.jpg' %}" class="img-thumbnail pics" title="Aghor Arjun" alt="Aghor Arjun"></a>
+                    <a href="{% static 'img/three.jpg' %}"><img src="{% static 'img/three.jpg' %}" class="img-thumbnail pics" title="Shani, Shiva, Bramha and Bheem" alt="Shani, Shiva, Bramha and Bheem"></a>
+                    <a href="{% static 'img/four.jpg' %}"><img src="{% static 'img/four.jpg' %}" class="img-thumbnail pics" title="CSE" alt="CSE"></a>
+                    <a href="{% static 'img/five.jpg' %}"><img src="{% static 'img/five.jpg' %}" class="img-thumbnail pics" title="Arjun & Bramha" alt="Arjun & Bramha"></a>
+                    <a href="{% static 'img/six.jpg' %}"><img src="{% static 'img/six.jpg' %}" class="img-thumbnail pics" title="Rajdari" alt="Rajdari"></a>
+                </div>
+            </div>
+
+            <div id="about" class="container mb-5 mt-5">
+                <div class="pb-4 mb-5 mt-4 border-bottom">
+                    <h1> About Me</h1>
+                </div>
+                <div class="mt-5 mb-5 col_text">
+                    Hey Everyone, This is Aman Maurya from CSE 2nd year IERT, Prayagraj. Next comes some really nonsense text just to fill this gap. <br>What is Lorem Ipsum?
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    
+                    Why do we use it?
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).                    
+                </div>
+
+                <div class="row" style="text-align: center;">
+                    <div class="card text-dark bg-warning col-md-5 mr-auto mb-2">
+                        <div class="card-header pb-0">
+                            <h4>CSE Enthusiast</h4>
+                        </div>
+                        <div class="card-body pb-1">
+                            <img src="/static/img/prg.jpg" class="img-thumbnail">
+                            <p class="pt-2">I have command in C, Data Structures in C, Java, Python, HTML5, CSS3, Bootstrap4 and Django. I am learning Javascript and shell programming in linux.</p>
+                        </div>
+                        <div class="card-footer p-0 text-right">
+                            <a href="https://en.wikipedia.org/wiki/Computer_Science_and_Engineering" title="About CSE"><button class="btn btn-light">Know more</button></a>
+                        </div>
+                    </div>
+                
+                <div class="card bg-light text-dark col-md-5 ml-auto mb-2">
+                    <div class="card-header pb-0">
+                        <h4>Guitarist</h4>
+                    </div>
+                    <div class="card-body pb-1">
+                        <img src="/static/img/gui.jpg" style="height: 200px;" class="img-thumbnail">
+                        <p class="pt-2">I have always been in love with music. <a href="https://www.youtube.com/watch?v=ttIKsnxPrMY">Nadan Parindey</a> and <a href="https://www.youtube.com/watch?v=9a4izd3Rvdw">Challa</a> are two of my all time favourites.</p>
+                    </div>
+                    <div class="card-footer p-0 text-right">
+                        <a href="https://en.wikipedia.org/wiki/Guitarist" title="About Guitarist"><button class="btn btn-warning ml-auto">Know more</button></a>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+            <div class="p-5"></div>
+
+            
+        </div>
+
+        <footer class="container-fluid mb-0 pb-2 pt-5 text-center">
+            <div id="contact" class="container">
+                <div class="pb-4 mt-5 mb-5 border-bottom">
+                    <h1>Contact Me!</h1>
+                </div>
+                <div class="row">
+                    
+                <form class="col-md-5 mr-auto" >
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Insert Your Name" type="text">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Insert Your Email" type="text">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Subject" type="text">
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="10" class="form-control">Type Something</textarea>
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-block btn-warning" type="submit">
+                    </div>
+                </form>
+                <div class="row" style="color: black;">
+                    
+                <div class="card card-secondary col-md-6 mx-auto mt-auto mb-5" style="width: 250px; height:300px;">
+                    <div class="card-header" style="background-color: #ffc107;">
+                        <h2><span class="fa fa-home"></span>Address</h2>
+                    </div>
+                    <div class="card-body text-left" style="background-color:antiquewhite;">
+                        <h5>773/1, Munshipura,<br>
+                        Maunathbhanjan, <br>
+                        Mau-275101,<br>
+                        U.P. India.<br></h5>
+                    </div>
+                    <div class="card-footer">
+                        &copy;Aman Maurya
+                    </div>
+                </div>
+                <div class="mx-auto mt-auto mb-3">
+                    <a href="mailto:amanmaury36@gmail.com" title="Gmail"><button id="social" class="btn btn-warning"><span class="fab fa-google"></span></button></a>
+                    <a href="https://www.facebook.com/aman.m05" title="Facebook"><button id="social" class="btn btn-light"><span class="fab fa-facebook-square"></span></button></a>
+                    <a href="https://www.instagram.com/aman__maurya__/" title="Instagram"><button id="social" class="btn btn-warning"><span class="fab fa-instagram"></span></button></a>
+                    <a href="https://twitter.com/aman_m05" title="Twitter"><button id="social" class="btn btn-light"><span class="fab fa-twitter"></span></button></a>
+                </div>
+                </div>
+        </footer>
+    </body>
+</html>
